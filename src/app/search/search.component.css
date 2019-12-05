@@ -1,0 +1,111 @@
+.material-icons.md-36 {
+	font-size: 36px;
+	vertical-align: middle;
+}
+
+.material-icons.md-30 {
+	vertical-align: middle;
+}
+
+.material-icons.md-31 {
+	vertical-align: bottom;
+}
+
+.material-icons.md-10 {
+	vertical-align: middle;
+	font-size: 18px;
+	padding-right: 3px;
+}
+
+.red, .invalid {
+	color: #b52e06;
+}
+
+.launch-size {
+	font-size: 15px;
+	color: #808080;
+}
+
+.margin {
+	margin-bottom: 50px;
+}
+
+.heading {
+	padding: 10px;
+}
+
+.md-15 {
+	width: 15px;
+	height: 15px;
+	vertical-align: middle;
+}
+
+.md-20 {
+	margin-left: 11px;
+	margin-right: 11px;
+}
+
+#grey {
+	color: #808080;
+}
+
+
+.input-group-text.green {
+	background-color: #3b5684;
+	border: 0px;
+}
+
+.bg {
+	height: 100%;
+	width: 100%;
+	background-image:
+	url("https://images.unsplash.com/photo-1470790376778-a9fbc86d70e2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
+}
+
+.invalid-feedback.md-6 {
+	display: block;
+}
+
+.navbar-bg {
+	background: #FF6347;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+	color: #3b5684;
+}
+
+.btn {
+	background-color: #FF6347;	
+	color: #ffffff;
+}
+
+#flex {
+	display: flex;
+	flex-flow: row;
+	
+}
+
+
+.card {
+    width:300px;
+    height:auto;
+}
+.card-img-top {
+    height:200px;
+}
+
+#purple {
+	background-color: #7967dd;
+	border: #7967dd;
+}
+
+#price {
+    font-family:Arial;
+    color:red;
+}
+
+#lightgrey {
+	color: #9992c2;
+
+}

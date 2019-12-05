@@ -1,0 +1,92 @@
+<div class="row">
+    <div class="col">
+      <div class="row justify-content-center">
+        <div class="col-lg-6 col-md-6 col-sm-6 mt-5 mb-5">
+          <h2 class="mb-1 ml-2" id="grey">
+            Find Products 
+          </h2>
+          <form>
+            <div class="input-group ">
+              <div class="input-group-prepend ">
+                <label for="search-bar" class="input-group-text gray  lighten-3 ml-2 ">
+                  <i class="material-icons">shopping_cart</i>
+                </label>
+              </div>
+              <input class="form-control mx-auto w-75 " type="search" placeholder=" Search products ... " aria-label="Search" name="Search" id="search-bar"  [(ngModel)]='searchKey' (input)="search()">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  <div id="flex">
+     <app-product-type [list]="filteredProdList"></app-product-type> 
+      
+</div>
+
+
+<!-- <div *ngFor="let check of _filteredlist">
+{{check.productName}}
+</div> -->
+<div *ngIf="!this.productService.flag">
+
+<div class="container-fluid mx-auto mb-5">
+    <div class="card-deck my-3 mx-auto" >
+        <div class="col-12 col-md-6 col-lg-3 mx-auto"  *ngFor="let product of _filteredlist">
+            <div class="card mx-auto" >
+                <img
+                    src="{{product.productImage}}"
+                    class="card-img-top" alt="missing" />
+                <div class="card-body">
+                    <div class="row">
+                            
+                        <label for="name"><h5 id="name">{{product.productName}} ( {{product.productBrand}} )</h5></label> <span
+                            class="ml-auto" id="price"><label for="price">&#8377;{{product.ratePerQuantity}}</label></span>
+                    </div>
+    
+                    <div class="row">
+                        <label for="Product_Code"><h6>Product Code: {{product.productCode}}</h6></label>
+                    </div>
+    
+                    <div class="row">
+                             
+                                <span class="badge badge-danger mb-3 mr-1" id="active"><label
+                                    for="active" *ngIf="product.stock =='0'"> inactive</label></span> 
+                        <span id="category"><label for="category"><h6>Category: {{product.productType}}</h6></label></span>
+
+                        <span class="badge badge-success mb-3 ml-auto" id="active"><label
+                            for="active" *ngIf="product.stock !='0'"> active</label></span>
+                    </div>
+                    
+                  
+                        <div class="row">
+                                <i class="material-icons">room</i>
+                                <label for="name">Aisle {{product.aisle}} - </label> 
+                                <label for="price">Shelf {{product.shelf}}</label>
+                            </div>
+                            <div class="row">
+                                    <i class="material-icons">access_time</i><span id="dateofLaunch"><label
+                                        for="dateofLaunch">Launch  </label>
+                                    <span class="ml-auto">  {{product.addedDate | date}}</span></span>
+                                </div>
+
+          <div class="row" *ngIf="isAdmin">
+                        <a  class="btn btn-primary mt-2 mx-auto" id="purple" [routerLink]="['/edit-product',product.productCode]">
+                            <i class="material-icons">edit</i> Edit
+                        </a>    
+                    </div>
+                    <div class="row" *ngIf="isAdmin">
+                            <a  class="btn btn-primary mt-2 mx-auto text-white" id="purple" (click)="delete(product.productCode)">
+                                <i class="material-icons">delete_forever</i> Delete
+                            </a>
+                        </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    </div>
+    <br>
+  </div>
